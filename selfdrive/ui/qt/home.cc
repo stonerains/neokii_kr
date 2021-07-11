@@ -195,7 +195,7 @@ void OffroadHome::refresh() {
     alert_notification->setText("업데이트");
   } else {
     int alerts = alerts_widget->alertCount;
-    alert_notification->setText(QString::number(alerts) + " 경고" + (alerts == 1 ? "" : "S"));
+    alert_notification->setText(QString::number(alerts) + " alerts" + (alerts == 1 ? "" : "S"));
   }
 
   if (!alert_notification->isVisible() && !first_refresh) {
@@ -203,5 +203,5 @@ void OffroadHome::refresh() {
   }
   alert_notification->setVisible(true);
   // Red background for alerts, blue for update available
-  alert_notification->setStyleSheet(alerts_widget->updateAvailable ? "background-color: #364DEF" : "background-color: #E22C2C");
+  alert_notification->setStyleSheet(alerts_widget->updateAvailable ? "background-color: #364DEF" : "background-color: #364DEF");
 }
