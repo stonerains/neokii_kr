@@ -1,1 +1,1 @@
-#define COMMA_VERSION "0.8.6 Huck_finn"
+#define COMMA_VERSION "0.8.6 Huck_Finn"
