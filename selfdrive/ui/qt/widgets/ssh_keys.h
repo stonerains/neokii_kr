@@ -49,7 +49,7 @@ class GpsOffToggle : public ToggleControl {
   Q_OBJECT
 
 public:
-  GpsOffToggle() : ToggleControl("GPS 오프-화이트판다 종료이상", "화이트판다 사용시 자동종료를 위해서 켜세요", "../assets/offroad/icon_shell.png", Params().getBool("GpsOff")) {
+  GpsOffToggle() : ToggleControl("GPS 오프-화이트판다 only", "화이트판다 사용시 자동종료를 위해서 켜세요", "../assets/offroad/icon_shell.png", Params().getBool("GpsOff")) {
     QObject::connect(this, &GpsOffToggle::toggleFlipped, [=](int state) {
       char value = state ? '1' : '0';
       Params().put("GpsOff", &value, 1);
