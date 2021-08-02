@@ -16,7 +16,7 @@ AUTO_TR_BP = [3., 11.1, 19.4, 30.]
 AUTO_TR_V = [1.0, 1.05, 1.35, 1.88]
 
 AUTO_TR_ENABLED = True
-AUTO_TR_CRUISE_GAP = 4
+AUTO_TR_CRUISE_GAP = 2
 
 MPC_T = list(np.arange(0,1.,.2)) + list(np.arange(1.,10.6,.6))
 
