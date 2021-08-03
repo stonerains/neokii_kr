@@ -412,37 +412,37 @@ static void bb_ui_draw_measures_left(UIState *s, int bb_x, int bb_y, int bb_w ) 
   }
 
   //add  desired steering angle
-  if (UI_FEATURE_LEFT_DESIRED_STEER) {
-    char val_str[16];
-    char uom_str[6];
-    NVGcolor val_color = nvgRGBA(255, 255, 255, 200);
+  //if (UI_FEATURE_LEFT_DESIRED_STEER) {
+    //char val_str[16];
+    //char uom_str[6];
+    //NVGcolor val_color = nvgRGBA(255, 255, 255, 200);
 
-    auto carControl = (*s->sm)["carControl"].getCarControl();
-    if (carControl.getEnabled()) {
+    //auto carControl = (*s->sm)["carControl"].getCarControl();
+    //if (carControl.getEnabled()) {
       //show Orange if more than 6 degrees
       //show red if  more than 12 degrees
 
-      auto actuators = carControl.getActuators();
-      float steeringAngleDeg  = actuators.getSteeringAngleDeg();
+      //auto actuators = carControl.getActuators();
+      //float steeringAngleDeg  = actuators.getSteeringAngleDeg();
 
-      if(((int)(steeringAngleDeg ) < -30) || ((int)(steeringAngleDeg ) > 30)) {
-        val_color = nvgRGBA(255, 255, 255, 200);
-      }
-      if(((int)(steeringAngleDeg ) < -50) || ((int)(steeringAngleDeg ) > 50)) {
-        val_color = nvgRGBA(255, 255, 255, 200);
-      }
+      //if(((int)(steeringAngleDeg ) < -30) || ((int)(steeringAngleDeg ) > 30)) {
+        //val_color = nvgRGBA(255, 255, 255, 200);
+      //}
+      //if(((int)(steeringAngleDeg ) < -50) || ((int)(steeringAngleDeg ) > 50)) {
+        //val_color = nvgRGBA(255, 255, 255, 200);
+      //}
       // steering is in degrees
-      snprintf(val_str, sizeof(val_str), "%.1f°", steeringAngleDeg );
-    } else {
-       snprintf(val_str, sizeof(val_str), "-");
-    }
-      snprintf(uom_str, sizeof(uom_str), "");
-    bb_h +=bb_ui_draw_measure(s,  val_str, uom_str, "필요 조향각",
-        bb_rx, bb_ry, bb_uom_dx,
-        val_color, lab_color, uom_color,
-        value_fontSize, label_fontSize, uom_fontSize );
-    bb_ry = bb_y + bb_h;
-  }
+      //snprintf(val_str, sizeof(val_str), "%.1f°", steeringAngleDeg );
+    //} else {
+       //snprintf(val_str, sizeof(val_str), "-");
+    //}
+      //snprintf(uom_str, sizeof(uom_str), "");
+    //bb_h +=bb_ui_draw_measure(s,  val_str, uom_str, "필요 조향각",
+        //bb_rx, bb_ry, bb_uom_dx,
+        //val_color, lab_color, uom_color,
+        //value_fontSize, label_fontSize, uom_fontSize );
+    //bb_ry = bb_y + bb_h;
+  //}
 
 
   //finally draw the frame
@@ -461,7 +461,7 @@ static void bb_ui_draw_measures_right(UIState *s, int bb_x, int bb_y, int bb_w )
   int bb_h = 5;
   NVGcolor lab_color = nvgRGBA(255, 255, 255, 200);
   NVGcolor uom_color = nvgRGBA(255, 255, 255, 200);
-  int value_fontSize=30;
+  int value_fontSize=40;
   int label_fontSize=15;
   int uom_fontSize = 15;
   int bb_uom_dx =  (int)(bb_w /2 - uom_fontSize*2.5) ;
