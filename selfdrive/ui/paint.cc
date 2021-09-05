@@ -1071,7 +1071,7 @@ static void ui_draw_vision(UIState *s) {
 //bsd
     ui_draw_vision_car(s);
   ui_draw_vision_scc_gap(s);
-//  ui_draw_vision_brake(s);
+  ui_draw_vision_brake(s);
   ui_draw_vision_autohold(s);
 }
 
